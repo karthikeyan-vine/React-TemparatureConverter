@@ -47,7 +47,7 @@ bash
 
 Usage
 
-    Enter a numeric temperature in the input field.
+    - Enter a numeric temperature in the input field.
     Select the desired unit of measurement (Celsius or Fahrenheit) using the radio buttons.
     Click the "Convert" button to convert the temperature to the other unit.
     View the temperature range description and background color change based on the converted temperature.
