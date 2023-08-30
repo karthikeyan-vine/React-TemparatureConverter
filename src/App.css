@@ -1,85 +1,82 @@
+/* styles.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
 .App {
+  text-align: center;
+  padding: 2rem;
   font-family: sans-serif;
   text-align: center;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: url("/public/backgroundImage/sysvineLogo.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* background: rgba(0, 212, 255, 0.3); */
-  /* box-shadow: 0 0 4px 10px rgba(0, 0, 0, 0.3); */
-}
-h1 {
-  color: #333; /* Adjust the color as needed */
 }
 
-p {
-  color: #555; /* Adjust the color as needed */
+h1 {
+  color: #333;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.convert-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.swap-button {
+  background-color: #f44336;
+  color: white;
+  margin-left: 10px;
+}
+
+.temperature {
+  font-size: 24px;
+  margin-top: 20px;
 }
 
 .error {
   color: red;
-  font-size: 14px;
-  margin-top: 5px;
 }
 
-.temperature {
-  font-size: 18px;
-  margin-top: 10px;
-  text-align: center;
-}
-
-.hot {
-  color: red;
-}
-
-.warm {
-  color: orange;
-}
-
-.cool {
-  color: green;
-}
-
-.cold {
-  color: blue;
-}
-
-.freezing {
-  color: #0000ff;
-}
-
-.moderate {
-  color: #ffff00;
-}
-
+/* Gradient background */
 :root {
-  --base-bg-color: #f0f0f0; /* Default background color */
-  box-shadow: 0 0 4px 10px rgba(0, 0, 0, 0.3);
+  --gradient-bg: linear-gradient(to bottom, #007bff, transparent) 0%,
+    linear-gradient(to bottom, #00cfff, transparent) 10%,
+    linear-gradient(to bottom, #4bff00, transparent) 20%,
+    linear-gradient(to bottom, #ffc700, transparent) 30%,
+    linear-gradient(to bottom, #ff5733, transparent) 40%,
+    linear-gradient(to bottom, #ff1700, transparent) 50%;
+  --base-bg-color: #007bff;
 }
 
 body {
-  transition: background-color 0.5s ease-in-out;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 121, 99, 1) 35%,
-    rgba(255, 200, 0, 1) 100%
-  );
+  background: var(--gradient-bg), var(--base-bg-color);
+  background-blend-mode: color, normal;
+  transition: background 0.5s ease;
+  background-repeat: none;
 }
