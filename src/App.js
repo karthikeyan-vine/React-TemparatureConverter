@@ -92,7 +92,7 @@ const App = () => {
       <div className="input-container">
         <input
           type="number"
-          placeholder={`Enter temperature (${
+          placeholder={`Enter Temperature ${
             unit === "celsius" ? "°C" : "°F"
           })`}
           value={temperature}
