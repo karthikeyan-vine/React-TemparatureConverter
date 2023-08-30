@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.css";
+import "./styles.css";
 
 const App = () => {
   const [temperature, setTemperature] = useState("");
@@ -8,12 +8,12 @@ const App = () => {
   const [error, setError] = useState("");
 
   const temperatureDescriptions = [
-    { min: -Infinity, max: 0, text: "Freezing" },
-    { min: 1, max: 10, text: "Cold" },
-    { min: 11, max: 20, text: "Cool" },
-    { min: 21, max: 30, text: "Moderate" },
-    { min: 31, max: 40, text: "Warm" },
-    { min: 41, max: Infinity, text: "Hot" }
+    { min: -Infinity, max: 0, text: "Freezing", color: "#007BFF" },
+    { min: 1, max: 10, text: "Cold", color: "#00CFFF" },
+    { min: 11, max: 20, text: "Cool", color: "#4BFF00" },
+    { min: 21, max: 30, text: "Moderate", color: "#FFC700" },
+    { min: 31, max: 40, text: "Warm", color: "#FF5733" },
+    { min: 41, max: Infinity, text: "Hot", color: "#FF1700" }
   ];
 
   const convertTemperature = () => {
@@ -87,9 +87,9 @@ const App = () => {
   };
 
   return (
-    <div className="App">
+    <div className={`App ${getColorClass(convertedTemperature)}`}>
       <h1>Temperature Converter</h1>
-      <div>
+      <div className="input-container">
         <input
           type="text"
           placeholder={`Enter temperature (${
@@ -98,7 +98,6 @@ const App = () => {
           value={temperature}
           onChange={(e) => setTemperature(e.target.value)}
         />
-
         <label>
           <input
             type="radio"
@@ -117,13 +116,16 @@ const App = () => {
           />
           Fahrenheit
         </label>
-
-        <button onClick={convertTemperature}>Convert</button>
-        <button onClick={handleSwap}>Swap</button>
+        <button className="convert-button" onClick={convertTemperature}>
+          Convert
+        </button>
+        <button className="swap-button" onClick={handleSwap}>
+          Swap
+        </button>
       </div>
-      <div>
+      <div className="temperature-container">
         <p className="error">{error}</p>
-        <p className={`temperature ${getColorClass(convertedTemperature)}`}>
+        <p className={`temperature`}>
           {getTemperatureDescription(convertedTemperature)}{" "}
           {convertedTemperature}
         </p>
