@@ -80,3 +80,7 @@ body {
   transition: background 0.5s ease;
   background-repeat: none;
 }
+
+.convertButton{
+  padding-top: 10px;
+}
