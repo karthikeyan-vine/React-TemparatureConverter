@@ -116,12 +116,14 @@ const App = () => {
           />
           Fahrenheit
         </label>
-        <button className="convert-button" onClick={convertTemperature}>
-          Convert
-        </button>
-        <button className="swap-button" onClick={handleSwap}>
-          Swap
-        </button>
+        <div>
+          <button className="convert-button" onClick={convertTemperature}>
+            Convert
+          </button>
+          <button className="swap-button" onClick={handleSwap}>
+            Swap
+          </button>
+        </div>
       </div>
       <div className="temperature-container">
         <p className="error">{error}</p>
