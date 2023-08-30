@@ -91,7 +91,7 @@ const App = () => {
       <h1>Temperature Converter</h1>
       <div className="input-container">
         <input
-          type="text"
+          type="number"
           placeholder={`Enter temperature (${
             unit === "celsius" ? "°C" : "°F"
           })`}
