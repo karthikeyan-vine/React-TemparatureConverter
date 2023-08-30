@@ -116,7 +116,7 @@ const App = () => {
           />
           Fahrenheit
         </label>
-        <div>
+        <div className="convertButton">
           <button className="convert-button" onClick={convertTemperature}>
             Convert
           </button>
